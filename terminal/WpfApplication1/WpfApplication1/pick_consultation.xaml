@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApplication1.pick_consultation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        FontFamily="Roboto"
+        Title="create_request" Height="1080" Width="1920" ResizeMode="NoResize" WindowState="Maximized" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#e5e5e5">
+    <Grid>
+        <Label Content="Выбери тип косультации:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="749, 435, 749, 60" FontSize="34" FontWeight="Bold"/>
+        <Button x:Name="instant_consulation" Style="{StaticResource white_btn}" Content="Срочная" Margin="611,535,976,435" Click="instant_consulation_Click" FontFamily="Roboto"/>
+        <Button x:Name="i_can_wait" Content="Могу подождать" Style="{StaticResource white_btn}" Margin="976, 535, 611, 435" Click="i_can_wait_Click"/>
+        <Button x:Name="btn_return" Style="{StaticResource Return}" Click="btn_return_Click" Width="218" Height="80" Margin="80,80,1621,920" Panel.ZIndex="10"/>
+        <Image Source="1200px-Leroy_Merlin.svg.png" Width="192" Height="110" Margin="10,933,1692,10" Opacity="0.2"/>
+
+
+
+    </Grid>
+</Window>

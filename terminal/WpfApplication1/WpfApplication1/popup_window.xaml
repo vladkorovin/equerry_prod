@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfApplication1.popup_window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Title="popup_window" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" FontFamily="Roboto" WindowStyle="None" BorderThickness="1" Style="{StaticResource Popup_window_style}" AllowsTransparency="True">
+    <Grid>
+        <TextBox Name="textbox_main" HorizontalAlignment="Center" IsReadOnly="True" Height="80" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="812" Margin="0,342,0,317" HorizontalScrollBarVisibility="Hidden" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="34" BorderThickness="0"/>
+        <TextBox Name="textbox_secondary" Text="lol" IsReadOnly="True" TextWrapping="Wrap" IsEnabled="False" HorizontalAlignment="Center" BorderThickness="0" Margin="102,446,74, 219" HorizontalScrollBarVisibility="Hidden" VerticalAlignment="Center" HorizontalContentAlignment="Center" Width="636" Height="74" FontSize="26" TextChanged="textbox_secondary_TextChanged"/>
+        <Button x:Name="button" Content="left_btn" Style="{StaticResource miss}" Click="button_Click" Margin="106, 579, 422, 50" HorizontalContentAlignment="Center" Panel.ZIndex="100000000"/>
+        <Button x:Name="confirm_button" Content="right_btn" Style="{StaticResource confirm_user}" Click="confirm_button_Click" Margin="422, 579, 106, 50" HorizontalContentAlignment="Center" Panel.ZIndex="100000" />
+        <Image x:Name="img" Width="290" Height="290" Margin="261, 0, 261, 456"/>
+        <Image x:Name="gf" gif:ImageBehavior.AnimatedSource="/Resources/91.gif" Width="100" Height="100" VerticalAlignment="Bottom" Margin="356, 0,356,200" Visibility="Hidden"/>
+
+
+
+    </Grid>
+</Window>

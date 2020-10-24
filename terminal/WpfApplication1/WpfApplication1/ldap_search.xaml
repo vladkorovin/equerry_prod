@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApplication1.ldap_search"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="ldap_search"  WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" ShowInTaskbar="False" AllowsTransparency="True" Style="{StaticResource found_by_ldap}">
+
+
+    <Grid Width="812" Height="541">
+
+        <Label Content="Имя" Margin="73, 60, 682, 449" FontSize="20" Foreground="#999999"></Label>
+        <TextBox x:Name="fio_tb" FontSize="29" FontWeight="Bold" Margin="73, 96, 73, 365" Text="Уга буга шуга дуга" Foreground="#333333" BorderThickness="0" Background="Transparent" Width="665" Height="80" IsReadOnly="True"></TextBox>
+        <Label Content="LDAP" Margin="73, 210, 677, 293" Foreground="#999999" FontSize="20"></Label>
+        <TextBox x:Name="ldap_tb" FontSize="20" Text="60000000" Foreground="#333333" BorderThickness="0" Background="Transparent" Width="109" Height="32" Margin="73, 252, 629, 257"></TextBox>
+        <Label Content="Должность" Margin="273, 210, 364, 293" Foreground="#999999" FontSize="20"></Label>
+        <TextBox x:Name="title_tb" FontSize="20" Text="Самый крутой отдел на свете" Foreground="#333333" BorderThickness="0" Background="Transparent" Width="465" Margin="274,252,73,225" TextWrapping="Wrap"
+     VerticalScrollBarVisibility="Hidden"
+     AcceptsReturn="True"/>
+        <Button Style="{StaticResource miss}" Content="Нет, это ошибка" Margin="106, 381, 422, 50" Click="Button_Click_1"></Button>
+        <Button Style="{StaticResource confirm_user}" Content="Да, это я" Margin="422, 381, 106, 50" Click="Button_Click_2"></Button>
+    </Grid>
+</Window>

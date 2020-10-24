@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Equery - Интерфейс СТП" Height="309.235" Width="848.451"
+        FontFamily="DIN Condensed" Closing="Window_Closing" ResizeMode="NoResize">
+    <Grid Margin="0,0,-8,6">
+        <GroupBox FontSize ="25" Header="В очереди: " HorizontalAlignment="Left" Height="259" Margin="10,10,0,0" VerticalAlignment="Top" Width="212">
+            <TextBox x:Name="query_tb" HorizontalAlignment="Left" Height="221" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="202" Margin="0,0,-2,0" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+        </GroupBox>
+        <GroupBox FontSize ="25" Header="Сейчас в работе:" HorizontalAlignment="Left" Height="127" Margin="227,10,0,0" VerticalAlignment="Top" Width="380">
+            <Grid Name ="Cur" HorizontalAlignment="Left" Height="88" Margin="0,0,-2,0" VerticalAlignment="Top" Width="370" ShowGridLines="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Name="open_bt" Grid.Row="1" Grid.Column="0" Content="Открыть" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="122" Height="40" Click="Button_Click"/>
+                <Button Name ="postpone_bt" Grid.Row="1" Grid.Column="1" Content="Отложить" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="122" Height="40" Click="Button_Click_1"/>
+                <Button Name ="solve_bt" Grid.Row="1" Grid.Column="2" Content="Решить" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="122" Height="40" Click="Button_Click_2"/>
+                <TextBox x:Name="current_req_tb" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Text="RFS123456_7890" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="3"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox FontSize ="25" Header="Следующая в очереди:" HorizontalAlignment="Left" Height="127" Margin="227,142,0,0" VerticalAlignment="Top" Width="380">
+            <TextBox x:Name="next_req_tb" HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" Text="RFS123456_7890" VerticalAlignment="Top" Width="370" Margin="0,0,-2,0" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+        </GroupBox>
+        <Button x:Name="solve_bt_Copy" Content="Взять в работу" HorizontalAlignment="Left" Margin="235,222,0,0" VerticalAlignment="Top" Width="366" Height="42" FontSize="25" Click="solve_bt_Copy_Click"/>
+        <GroupBox FontSize ="25" Header="Отложенные:" HorizontalAlignment="Left" Height="259" Margin="612,10,0,0" VerticalAlignment="Top" Width="212">
+            <TextBox x:Name="postponed_tb" HorizontalAlignment="Left" Height="221" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="202" Margin="0,0,-2,0" HorizontalContentAlignment="Center" IsReadOnly="True" TextChanged="postponed_tb_TextChanged"/>
+        </GroupBox>
+    </Grid>
+</Window>
