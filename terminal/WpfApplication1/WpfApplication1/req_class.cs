@@ -84,8 +84,8 @@ namespace req_class_namespace
         public string creayion_url;
         public string x_api_key;
         public string authorization;
-        public string login = "api test";
-        public string password = "123";
+        public string login;
+        public string password;
         public string db_connection_string;
 
         public Constants() {
